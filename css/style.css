@@ -198,7 +198,7 @@ body {
 .home__buttons .CV-btn:hover {
   background-color: #ff00aa;
 }
-.home__buttons button:hover svg {
+.home__buttons a:not(.CV-btn):hover svg {
   fill: #ff00aa;
 }
 .home__p {
