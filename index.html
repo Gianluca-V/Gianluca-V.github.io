@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/f43b87eb74.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <title>Gianluca Vespe Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">
+            <h1 class="title__h1">GV</h1>
+            <h2 class="title__h5">Gianluca Vespe</h2>
+        </div>
+        <nav class="nav">
+            <ul class="nav__ul">
+                <a href="#Home" class="active">
+                    <li class="nav__li">Home</li>
+                </a>
+                <a href="#Projects">
+                    <li class="nav__li">Projects</li>
+                </a>
+                <a href="#Skills">
+                    <li class="nav__li">Skills</li>
+                </a>
+                <a href="#About">
+                    <li class="nav__li">About me</li>
+                </a>
+                <a href="#Contact">
+                    <li class="nav__li">Contact</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section home" id="Home">
+        <img src="assets/photo.jpg" alt="Photo" class="photo" />
+        <div class="home__control">
+            <div class="home__data">
+                <h3 class="home__h3">Gianluca Vespe</h3>
+                <h4 class="home__h4">Developer<span class="accent">.</span></h4>
+                <p class="home__p">
+                    Lover of development, passionate about challenges, and always eager for growth. Aiming to become the <span class="accent italic">best programmer in the world</span> with absolute difference.
+                </p>
+            </div>
+
+            <div class="home__buttons">
+                <button class="CV-btn">Download CV</button>
+                <button class="github-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg>
+                </button>
+                <button class="linkedIn-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg>
+                </button>
+                <button class="mail-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects" id="Projects">
+        <h3 class="section-title projects__title">Projects</h3>
+        <div class="projects__container">
+            <div class="projects__div">
+                <img src="assets/ecommerce-img.jpg" alt="ecommerce" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">eCommerce</div>
+                    <p class="projects__description">
+                        An eCommerce made with angular, Nest.JS and postgreSQL
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/angularCrud-img.jpg" alt="Angular CRUD" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Angular CRUD</div>
+                    <p class="projects__description">
+                        A movie CRUD system made with Angular, express and MySQL
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/angularList-img.jpg" alt="Angular List" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Angular List</div>
+                    <p class="projects__description">
+                        A shopping list made with angular
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/wordaside-img.png" alt="Word as IDE" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Word as IDE</div>
+                    <p class="projects__description">
+                        Word as a C++ IDE made with C#, .NET and windows Forms
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/educarInfancia-img.png" alt="Educar Infancia" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Educational website</div>
+                    <p class="projects__description">
+                        An educational website where kids can learn numbers, letters and
+                        colors
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/levelWarriors-img.png" alt="Lever Warriors" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Lever Warriors</div>
+                    <p class="projects__description">
+                        A 2 player game made in Unity, available on itch.io:
+                        https://gianlucav.itch.io/lever-warriors
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/futureNow-img.png" alt="futureNow" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Time travel calculator</div>
+                    <p class="projects__description">
+                        A time travel calculator using time dilatation of special
+                        relativity
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/tronGame-img.png" alt="Tron Game C++" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__name">Tron Game C++</div>
+                    <p class="projects__description">
+                        A 2 player Tron Game made in C++ that runs on consol
+                    </p>
+                </div>
+            </div>
+            <div class="projects__div">
+                <img src="assets/snakeGame-img.png" alt="Snake Game C++" class="projects__img" />
+                <div class="projects__data">
+                    <div class="projects__title">Snake Game C++</div>
+                    <p class="projects__description">
+                        A Snake Game made in C++ that runs on console
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills" id="Skills">
+        <div class="skills__container">
+            <h3 class="section-title skills__title">Skills</h3>
+        <div class="skills__div">
+            <img src="assets/angular-img.png" alt="angular" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/csharp-img.png" alt="c#" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/css-img.png" alt="css" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/html-img.png" alt="html" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/javasript-img.png" alt="js" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/mysql-img.png" alt="mysql" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/nodejs-img.png" alt="node" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/Postgresql-img.png" alt="postgresql" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/nestjs-img.svg" alt="nestjs" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/Bootstrap-img.png" alt="bootstrap" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/sass-img.png" alt="sass" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/Typescript-img.png" alt="ts" class="skills__img" />
+        </div>
+        <div class="skills__div">
+            <img src="assets/unity-img.png" alt="unity" class="skills__img" />
+        </div>
+        </div>
+    </section>
+
+    <section class="section about" id="About">
+        <h3 class="section-title about__title">About me</h3>
+        <p class="about__text">
+            I am <span class="accent">Gianluca</span>, a guy who loves programming since as long as can remember. At the age of 9, discovered that I wanted to be a programmer after watching an episode of Regular Show. From that moment on, dedicated myself to learning everything I could to achieve my dream. <br><br> After 2 years of trying to understand loops and conditionals (was a bit slow) while playing with Game Maker, decided to make the step to Unity and C#. only recently managed to make a game worth of publishing (not a game designer), but the experience and hours of fun are priceless to me. As I started my fourth year of high school, became interested in web development, and that's where I am now. <br><br> Besides programming, my second passion (actually, more like position 1.01) is watching anime and reading manga. On the other hand, hate sports. Yes, I am a walking stereotype.
+        </p>
+    </section>
+
+    <section class="section contact" id="Contact">
+        <h3 class="section-title contact__title">Contact</h3>
+        <form target="_blank" action="https://formsubmit.co/vespe.gianluca@gmail.com" method="post" id="contact__form" class="contact__form">
+            <div class="form-group">
+                <label for="email" class="label">Email:</label>
+                <input type="text" id="email" name="email" class="input input--email" required placeholder="example@gmail.com" />
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="label">Message:</label>
+                <textarea id="message" name="message" class="input input--text" required placeholder="Message..."></textarea>
+            </div>
+
+            <button type="submit" value="Enviar" class="submit"> Enviar </button>
+        </form>
+    </section>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

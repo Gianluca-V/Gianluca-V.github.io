@@ -1,0 +1,512 @@
+@use "sass:math";
+@mixin screenXS() {
+    @media (width < 740px) {
+        @content;
+    }
+}
+
+@mixin screenXL() {
+    @media (width > 850px) {
+        @content;
+    }
+}
+
+@mixin screen($width) {
+    @if ($width > 0) {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+
+    @if ($width < 0) {
+        $width: -1 * $width;
+
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin flex($direction: row, $justify: initial, $align: initial) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$text: #e9e7e9;
+$background: #0e0c0d;
+$primary: #be007f;
+$secondary: #1a1e1b;
+$accent: #ff00aa;
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+button,
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+svg {
+    fill: $text;
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+body {
+    background-color: $background;
+    color: $text;
+}
+
+.accent {
+    color: $accent;
+}
+.italic {
+    font-style: italic;
+}
+
+.header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    @include flex(row, space-between, center);
+    @include screenXS(){
+        @include flex(column, space-between, center);
+        gap:1rem;
+        z-index: math.$max-number;
+    }
+    background-color: #0e0c0d88;
+    backdrop-filter: blur(3px);
+    .title {
+        @include flex(column, center, center);
+        padding-left: 20px;
+        &__h1 {
+            font-size: 3rem;
+        }
+        &__h5 {
+            font-size: 1rem;
+        }
+    }
+
+    .nav {
+        &__icon{
+            display: none;
+        }
+        a {
+            transition: all 0.25s ease;
+        }
+        width: 50%;
+        &__ul {
+            width: 100%;
+            @include flex(row, space-evenly, center);
+        }
+        &__li {
+            display: block;
+            position: relative;
+            &::after {
+                content: "";
+                width: 0%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                border-bottom: 3px solid $accent;
+                transition: width 0.25s ease;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include screenXS() {
+            width: 100%;
+            &__ul{
+                @include flex(row,space-evenly,center)
+            }
+        }
+    }
+    .active {
+        color: $accent;
+        padding-inline: 5px;
+        border-bottom: 3px solid $accent;
+    }
+}
+
+.home {
+    @include flex(row, center, center);
+    @include screenXS() {
+        @include flex(column, center, center);
+        .photo {
+            margin-bottom: 20px;
+        }
+    }
+    margin: auto;
+    text-align: left;
+    width: 50%;
+    .photo {
+        max-width: 300px;
+        border-radius: 500px;
+        width: min(300px,75vw);
+        box-shadow: 0px 0px 50px -5px rgba($accent,.6);
+    }
+    &__control {
+        margin-left: 33px;
+        @include screenXS(){
+            margin: 0;
+        }
+        height: 100%;
+        @include flex(column, space-around, flex-start);
+    }
+    &__data {
+        @include flex(column, space-evenly, flex-start);
+    }
+    &__buttons {
+        margin-top: 2rem;
+        @include flex(row, flex-start, center);
+        width: 100%;
+        gap: 4rem;
+        @include screenXS(){
+            gap: 10%;
+        }
+        svg {
+            transition: fill 0.25s linear;
+            height: 30px;
+        }
+        .CV-btn {
+            background-color: $primary;
+            padding: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 900;
+            transition: background-color 0.25s linear;
+            &:hover {
+                background-color: $accent;
+            }
+        }
+        button:hover svg {
+            fill: $accent;
+        }
+    }
+    &__p {
+        margin-top: 1rem;
+        max-width: 75%;
+        @include screenXS(){
+            max-width: 100%;
+        }
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+    &__h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    &__h4 {
+        margin-block: 0.5rem;
+        line-height: 1.5rem;
+        font-size: 1.33rem;
+        width: 100%;
+        position: relative;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            background-color: $accent;
+            box-shadow: 0px 2px 20px 2px $accent;
+        }
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.section {
+    padding-block: 100px;
+}
+
+.projects {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-width: 900px;
+        gap: 1rem;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        @include screenXS() {
+            @include flex(column, center, center);
+            gap: 3rem;
+            &::before {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+        }
+        &::before {
+            content: " ";
+            position: absolute;
+            width: 50%;
+            height: 200%;
+            background-color: $accent;
+            top: 50%;
+            left: 50%;
+            z-index: -2;
+            animation: neon-border 5s linear infinite;
+            box-shadow: 0px 0px 50px 50px $accent;
+        }
+        &::after {
+            content: " ";
+            position: absolute;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            background-color: $background;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        @keyframes neon-border {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    }
+    &__div {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .projects__data {
+                bottom: 0%;
+            }
+        }
+        @include screenXS() {
+            max-height: 300px;
+            height: 300px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+    &__data {
+        position: absolute;
+        bottom: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 101%;
+        padding: 5%;
+        height: 50%;
+        text-align: center;
+        background-color: $secondary;
+        transition: bottom 0.5s ease-in-out;
+        @include flex(column, space-evenly, center);
+    }
+    &__name {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    &__description {
+        font-weight: 100;
+    }
+}
+
+.skills {
+    @include screenXL(){
+        &__container{
+            margin: auto;
+            margin-block: 200px;
+            position: relative;
+            @include flex(row, center, center);
+            width: 200px;
+            height: 200px;
+            user-select: none;
+        }
+        &__div {
+            position: absolute;
+            z-index: 0;
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+            transform-origin: 350px;
+            left: -100%;
+            transition: all 1s ease-in-out;
+            transform: rotate(0deg) translateX(250px);
+        }
+        &__div.active {
+            left: -1% * calc((350 / 280) * 100);
+            $skills-length: 13;
+            @for $i from 1 through $skills-length {
+                &:nth-of-type(#{$i}) {
+                    transform: rotate(calc(360deg / $skills-length * $i));
+                    transition-delay: calc(0.1s * $i);
+                }
+            }
+        }
+        &__img {
+            max-width: 100px;
+            max-height: 100px;
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+        &__title {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: $primary;
+            transition: background-color 0.25s linear;
+            &:hover {
+                background-color: $accent;
+            }
+            z-index: 1;
+            margin: auto;
+            text-align: center;
+            @include flex(row, center, center);
+            cursor: pointer;
+        }
+    }
+    @include screen(-850px){
+        &__container{
+            width: 80%;
+            height: 100%;
+            min-height: 300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(min(100%, 100px),1fr));
+            text-align: center;
+            position: relative;
+            //margin-inline: 50px;
+            background-color: $secondary;
+        }
+        &__title{
+            margin: 0;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            color:rgba($accent,0.8);
+            font-size: 5rem;
+            font-weight: 900;
+        }
+        &__img {
+            max-width: 10vw;
+            max-height: 10vh;
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+    }
+}
+
+.about {
+    &__text {
+        width: 50%;
+        @include screen(-768px){
+            width: 100%;
+            padding-inline: 10px;
+        }
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 1.2rem;
+        position: relative;
+        &::before,&::after{
+            content: ' ';
+            width: 33%;
+            height: 3px;
+            background-color: $accent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0px 2px 20px 2px $accent;
+        }
+        &::before{
+            top:-20px;
+        }
+        &::after{
+            bottom: -20px;
+        }
+    }
+}
+
+.contact{
+    &__form{
+        border: $accent 2px solid;
+        border-radius: 24px;
+        max-width:600px;
+        padding-block: 50px;
+        margin: auto; 
+        @include flex(column, center, center);
+        gap:2rem;
+        .form-group{
+            @include flex(row, space-between, flex-start);
+            @include screen(-550px){
+                @include flex(column, center, center);
+                width: 100%;
+            }
+            width: 50%;
+            .label{
+                cursor: pointer;
+            }
+            .input{
+                transition: box-shadow 0.25s ease;
+                @include flex(row, flex-end, center);
+                width:200px;
+                border-bottom: .2em solid $accent;
+	            background: rgba($accent, .2);
+	            border-radius: .2em .2em 0 0;
+	            padding: .4em;
+	            color: $text;
+                resize: vertical;
+            }
+            .label + .input,.input{
+                &:hover{
+                    box-shadow: 0px 2px 20px 2px $accent;
+                }
+            }
+        }
+        .submit{
+            background-color: rgba($color: $accent, $alpha: 0.4);
+            transition: 0.25s linear;
+            padding: 16px;
+            padding-inline: 50px;
+            border-radius: 24px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            &:hover{
+                background-color: $accent;
+            }
+        }
+    }
+}
