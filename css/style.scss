@@ -200,7 +200,7 @@ body {
                 background-color: $accent;
             }
         }
-        a:not(.CV-btn):hover svg {
+        a:hover svg {
             fill: $accent;
         }
     }
