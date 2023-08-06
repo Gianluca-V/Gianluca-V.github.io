@@ -150,6 +150,9 @@ body {
     }
 }
 
+.section.home{
+    padding-top: 150px
+}
 .home {
     @include flex(row, center, center);
     @include screenXS() {
@@ -214,7 +217,7 @@ body {
         font-size: 1.2rem;
     }
     &__h3 {
-        font-size: 2rem;
+        font-size: clamp(1.75rem,7vw,2rem);
         line-height: 2.5rem;
     }
     &__h4 {

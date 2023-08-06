@@ -125,6 +125,10 @@ body {
   border-bottom: 3px solid #ff00aa;
 }
 
+.section.home {
+  padding-top: 150px;
+}
+
 .home {
   display: flex;
   flex-direction: row;
@@ -213,7 +217,7 @@ body {
   }
 }
 .home__h3 {
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 7vw, 2rem);
   line-height: 2.5rem;
 }
 .home__h4 {
