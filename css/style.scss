@@ -183,7 +183,7 @@ body {
     }
     &__buttons {
         margin-top: 2rem;
-        @include flex(row, flex-start, center);
+        @include flex(row, space-evenly, center);
         width: 100%;
         gap: 4rem;
         @include screenXS(){
@@ -192,16 +192,6 @@ body {
         svg {
             transition: fill 0.25s linear;
             height: 30px;
-        }
-        .CV-btn {
-            background-color: $primary;
-            padding: 0.5rem;
-            font-size: 1.3rem;
-            font-weight: 900;
-            transition: background-color 0.25s linear;
-            &:hover {
-                background-color: $accent;
-            }
         }
         a:hover svg {
             fill: $accent;
