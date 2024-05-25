@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	seniority:string;
+	date:string;
+}
+
+const {title, body, seniority, date} = Astro.props;
+---
+
+<div class="card w-80 bg-base-100 shadow-xl border-2 border-white border-solid max-md:w-full max-md:my-5">
+	<div class="card-body p-3">
+	  <h2 class="card-title">
+		{title}
+	  </h2>
+	  <p class="text-balance">{body}</p>
+	  <div class="card-actions justify-end max-md:justify-start">
+		<div class="badge badge-outline">{seniority}</div> 
+		<div class="badge badge-outline">{date}</div> 
+	  </div>
+	</div>
+  </div>

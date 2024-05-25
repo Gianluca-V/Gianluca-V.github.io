@@ -9,20 +9,20 @@ export default {
 	daisyui: {
 		themes: [
 		  {
-			mytheme: {
-			"primary": "#db2777",
-			"secondary": "#5b21b6",
-			"accent": "#fbcfe8",
-			"neutral": "#374151",
-			"base-100": "#111827",
-			"info": "#f3f4f6",
-			"success": "#84cc16",
-			"warning": "#eab308",
-			"error": "#ef4444",
+			myTheme: {
+			  "primary": "#a63cc3",
+			  "secondary": "#691a7f",
+			  "accent": "#ff2097",
+			  "neutral": "#490445",
+			  "base-100": "#0F0F0F", //374151
+			  "info": "#f3f4f6",
+			  "success": "#84cc16",
+			  "warning": "#eab308",
+			  "error": "#ef4444",
 			},
 		  },
-	    ],
-	},
+		],
+	  },
 	plugins: [
 		daisyui,
 	  ],

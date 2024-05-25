@@ -1,0 +1,25 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	stack: string[];
+  image:string;
+  url:string;
+}
+
+const {title, body, stack, image, url} = Astro.props;
+---
+
+<div class="card">
+    <figure class="max-w-full aspect-video"><img src={image} alt="Project image"/></figure>
+    <div class="card-body">
+      <h2 class="card-title">{title}</h2>
+      <p>{body}</p>
+      <a href={url} class="btn btn-primary bg-white text-black text-xl">Github</a>
+      <div class="card-actions justify-end">
+        {stack.map((tech) => (
+            <div class="badge badge-outline">{tech}</div>
+          ))}
+      </div>
+    </div>
+  </div>

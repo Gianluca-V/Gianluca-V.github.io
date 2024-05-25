@@ -4,8 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import {BackgroundEffect} from '../components/BackgroundEffect.jsx'
+import Nav from '../components/Nav.astro';
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -13,11 +14,14 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative bg-base-100 z-0" >
+		<Nav/>
 		<slot />
+		<BackgroundEffect client:load/>
 	</body>
 </html>
 <style is:global>
@@ -34,8 +38,15 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		position:relative;
+		scroll-behavior: smooth;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body{
+		height: 100%;
+		overflow-x: hidden;
 	}
 	code {
 		font-family:
@@ -48,4 +59,18 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	svg{
+		max-height: 100%;
+		max-width: 100%;
+	}
+	#backgroundEffect{
+        position: fixed;
+        width: 25vw;
+        height: 50vh;
+		transform: translate(-50%,-50%);
+		overflow: hidden;
+        /*background: radial-gradient(circle, #7509794d 0%, #ffffff00 70%);*/
+        z-index: -1;
+		transition: left 0.125s linear, top 0.125s linear, opacity .5s linear;
+    }
 </style>

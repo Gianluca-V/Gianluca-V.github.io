@@ -1,0 +1,83 @@
+---
+import HtmlIcon from "../components/icons/htmlIcon.astro";
+import JavaScriptIcon from "../components/icons/javaScriptIcon.astro"
+import CssIcon from "../components/icons/cssIcon.astro"
+import PhpIcon from "../components/icons/phpIcon.astro"
+import SassIcon from "../components/icons/sassIcon.astro"
+import Mysql from "../components/icons/mysql.astro";
+import CsharpIcon from "../components/icons/csharpIcon.astro";
+import DotnetIcon from "../components/icons/dotnetIcon.astro";
+import SqlserverIcon from "../components/icons/sqlserverIcon.astro";
+import UnityIcon from "../components/icons/unityIcon.astro"
+---
+
+<div class="flex max-w-7xl m-auto flex-col min-h-screen">
+    <div class="hero w-full border-[1rem] border-base-300 border-solid rounded-t-xl">
+        <div class="hero-content text-center flex flex-col w-full p-0 gap-0">
+            <img src="/filasImage.jpeg" class="max-w-full w-full max-h-60 object-fill aspect-video shadow-2xl" />
+            <div class="max-w-[60ch]">
+                <h3 class="text-5xl font-bold">Fullstack web app</h3>
+                <p class="py-6 text-pretty">Developed a user-friendly web application for a non-profit organization that caters to individuals with mental disabilities. The application features an intuitive interface, an order management system, and an admin dashboard for content modification. A secure RESTful API powers the backend, handling all data elements and implementing robust security protocols for administrator registration. </p>
+            </div>
+            <div class="flex justify-center gap-4 w-fit h-12 mb-4 *:transition-transform *:opacity-50 hover:*:opacity-100 hover:*:scale-125">
+                <HtmlIcon/>
+                <JavaScriptIcon/>
+                <CssIcon/>
+                <SassIcon/>
+                <PhpIcon/>
+                <Mysql/>
+            </div>
+            <a href="https://github.com/Gianluca-V/FILAS" target="_blank" class="btn btn-primary btn-wide btn-outline text-xl mb-2">GitHub</a>
+        </div>
+    </div>
+    <div class="flex w-full flex-col md:flex-row">
+        <div class="hero w-full border-[1rem] border-base-300 border-solid rounded-bl-xl">
+            <div class="flex flex-col items-center w-full">
+                <div class="hero-content flex-col items-center p-0 lg:flex-row">
+                    <img src="/FakeStoreAPI.jpg" class="max-w-[50%] max-h-full max-lg:w-full max-lg:max-w-full shadow-2xl" />
+                    <div class="max-w-[60ch] pr-2 max-md:text-center">
+                        <h3 class="text-5xl font-bold text-balance">Fake Store API</h3>
+                        <p class="py-6 text-pretty">Developed an entire REST API for an ecommerce using clean architecture and domain driven design, following good practices and implementing design patterns. The system counts with filters, pagination and unit testing.</p>
+                    </div>
+                </div>  
+                <div class="flex justify-center gap-4 w-fit h-12 mb-4 *:transition-transform *:opacity-50 hover:*:opacity-100 hover:*:scale-125">
+                    <CsharpIcon/>
+                    <DotnetIcon/>
+                    <SqlserverIcon/>
+                </div>
+                <a href="https://github.com/Gianluca-V/Fake-Store-API-DDD" target="_blank" class="btn btn-primary btn-wide btn-outline text-xl mb-2">GitHub</a>
+            </div>
+        </div>
+        <div class="hero w-full border-[1rem] border-base-300 border-solid rounded-bl-xl">
+            <div class="flex flex-col items-center w-full">
+                <div class="hero-content flex-col items-center p-0 lg:flex-row-reverse">
+                    <img src="/LeverWarriors.png" class="max-w-[50%] max-h-full aspect-video max-lg:w-full max-lg:max-w-full shadow-2xl" />
+                    <div class="max-w-[60ch] text-right pl-2 max-md:text-center">
+                        <h3 class="text-5xl font-bold text-balance">Lever Warriors</h3>
+                        <p class="py-6 text-pretty">Challenge your opponent in a weapon-based 2D brawl made with Unity! Master the art of leverage to outmaneuver your foes with swords and other weapons. One fall or knockout means defeat, so stay sharp!</p>
+                    </div>
+                </div>  
+                <div class="flex justify-center gap-4 w-fit h-12 mb-4 *:transition-transform *:opacity-50 hover:*:opacity-100 hover:*:scale-125">
+                    <CsharpIcon/>
+                    <UnityIcon/>
+                </div>
+                <a href="https://gianlucav.itch.io/lever-warriors" target="_blank" class="btn btn-primary btn-wide btn-outline text-xl mb-2">Play it</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    .hero:nth-of-type(odd){
+        animation: fadeInLeft linear;
+        animation-timeline: view(98% 0%);
+        animation-fill-mode: forwards;
+    } 
+    .hero:nth-of-type(even){
+        animation: fadeInRight linear;
+        animation-timeline: view(98% 0%);
+        animation-fill-mode: forwards;
+    }   
+</style>

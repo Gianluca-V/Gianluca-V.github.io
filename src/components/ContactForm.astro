@@ -1,0 +1,49 @@
+<div class="hero min-h-screen max-w-full bg-zinc-800 bg-opacity-40">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h2 class="text-5xl max-sm:text-3xl font-bold text-balance">Contact now!</h2>
+        <p class="py-6 max-w-[36ch] text-pretty text-xl max-sm:text-lg"><span class="font-bold text-lg">Ready to Make Something Awesome?</span> Leave a message below and let's discuss how we can collaborate on your next project.</p>
+      </div>
+      <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <form action="https://formspree.io/f/moqgzkwj" method="POST" class="card-body max-w-[90vw]">
+          <div class="form-control">
+            <label class="input input-bordered flex items-center gap-2">
+                Name
+                <input type="text" name="name" class="grow overflow-x-scroll" placeholder="Jason Fyle" required/>
+            </label>
+          </div>
+
+          <div class="form-control">
+            <label id="emailLabel" class="input input-bordered flex items-center gap-2">
+                <span>Email</span>
+                <input type="email" name="email" class="grow overflow-x-scroll" placeholder="email@example.com" required/>
+            </label>
+          </div>
+
+          <div class ="form-control">
+            <textarea placeholder="Message" name="message" class="textarea textarea-lg textarea-bordered p-4" required />
+          </div>
+
+          <div class="form-control mt-6">
+            <button class="btn btn-primary">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #emailLabel:has(input:invalid){
+        border: 2px solid red;
+    }
+    #emailLabel:has(input:invalid) span{
+        color:var(--);
+    }
+
+    #emailLabel:has(input:valid){
+        border: 2px solid green;
+    }
+    #emailLabel:has(input:valid) span{
+        color:green;
+    }
+  </style>

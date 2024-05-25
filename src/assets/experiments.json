@@ -1,0 +1,29 @@
+[
+   {
+      "title": "Windows 7 web clone",
+      "body": "A web version of windows 7 made with Angular 17 and TypeScript, it has the basic functionalities of the operating system and a few applications.",
+      "stack": [
+         "Angular", "TypeScript", "html", "scss"
+      ],
+      "image": "/windows7Web.jpg",
+      "url": "https://github.com/Gianluca-V/Windows-7-Angular"
+   },
+   {
+      "title": "Word as a C++ IDE",
+      "body": "A Windows Form application that turns Microsoft Word in an IDE for C++ development, allowing compiling and running the code, and it has colors too. ",
+      "stack": [
+         "C#", ".NET", "Word", "Windows Forms"
+      ],
+      "image": "/WordAsIde.jpeg",
+      "url": "https://github.com/Gianluca-V/WordAsIDE"
+   },
+   {
+      "title": "Spin Warriors",
+      "body": "A 2D fighting game made with Unity inspired by BeyBlade, two players use their skills and powers in order to throw the other out of the arena",
+      "stack": [
+         "C#", "Unity"
+      ],
+      "image": "/SpinWarriors.jpg",
+      "url": "https://github.com/Gianluca-V/spin-warriors"
+   }
+]

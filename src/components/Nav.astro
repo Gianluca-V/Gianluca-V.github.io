@@ -1,0 +1,30 @@
+---
+import NavActions from './NavActions.astro'
+---
+
+<nav class="fixed top-0 flex justify-between w-full items-center px-4 py-1">
+    <a id="title" href="#home" class="leading-[3rem] font-semibold bg-gradient-to-r from-indigo-700 to-red-600 text-4xl text-transparent bg-clip-text max-md:text-2xl">Gianluca Vespe</a>
+    <NavActions w='10'/>
+</nav>
+
+<style>
+    nav{
+        z-index: 1;
+        animation: startNavAnimation linear both;
+        animation-timeline: scroll(block root);
+        animation-range: 30vh 48vh;
+        backdrop-filter: blur(2px);
+        background-color: #2224;
+    }
+
+    @keyframes startNavAnimation {
+        from{
+            display: none;
+            opacity: 0;
+        }
+        to{
+            display: flex;
+            opacity: 1;
+        }
+    }
+</style>

@@ -1,0 +1,23 @@
+---
+import ExperimentCard from "../components/ExperimentCard.astro"
+import experiments from "../assets/experiments.json"
+
+---
+
+<div class="grid grid-cols-3 p-2 gap-2 max-lg:grid-cols-2 max-md:grid-cols-1 ">
+    {
+        experiments.map((e:any)=>(
+            <div class="collapse bg-base-200 h-fit *:hover:bg-secondary">
+                <input type="checkbox" class="peer"/> 
+                <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                {e.title}
+                </div>
+                <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
+                {
+                    <ExperimentCard title={e.title} body={e.body} stack={e.stack} image={e.image} url={e.url}/>
+                }
+                </div>
+            </div>
+        ))
+    }
+</div>

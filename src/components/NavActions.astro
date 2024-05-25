@@ -1,0 +1,17 @@
+---
+import LinkedinIcon from './icons/linkedinIcon.astro'
+import MailIcon from './icons/mailIcon.astro'
+import GithubIcon from './icons/githubIcon.astro'
+
+interface Props {
+    w:string
+}
+const {w} = Astro.props;
+---
+
+<div id="actions" class="flex gap-6 max-sm:gap-2 flex-wrap justify-center items-center pl-4 max-w-fit">
+    <a class=`w-${w} max-md:w-${w}` href="https://www.linkedin.com/in/gianluca-vespe/"><LinkedinIcon/></a>
+    <a class=`w-${w} max-md:w-${w}` href="https://github.com/Gianluca-V"><GithubIcon/></a>
+    <a class=`w-${w} max-md:w-${w}` href="#contact"><MailIcon/></a>
+    <a class=`btn btn-accent text-xl transition ease duration-300 hover:text-white` href="/CV Gianluca Vespe English.pdf" download="/CV Gianluca Vespe English.pdf">Download CV</a>
+</div> 
