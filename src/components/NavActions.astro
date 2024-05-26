@@ -10,8 +10,8 @@ const {w} = Astro.props;
 ---
 
 <div id="actions" class="flex gap-6 max-sm:gap-2 flex-wrap justify-center items-center pl-4 max-w-fit">
-    <a class=`w-${w} max-md:w-${w}` href="https://www.linkedin.com/in/gianluca-vespe/"><LinkedinIcon/></a>
-    <a class=`w-${w} max-md:w-${w}` href="https://github.com/Gianluca-V"><GithubIcon/></a>
-    <a class=`w-${w} max-md:w-${w}` href="#contact"><MailIcon/></a>
-    <a class=`btn btn-accent text-xl transition ease duration-300 hover:text-white` href="/CV Gianluca Vespe English.pdf" download="/CV Gianluca Vespe English.pdf">Download CV</a>
+    <a class=`${w} max-md:${w}` href="https://www.linkedin.com/in/gianluca-vespe/" title="LinkedIn" aria-label="LinkedIn"><LinkedinIcon/></a>
+    <a class=`${w} max-md:${w}` href="https://github.com/Gianluca-V" title="Github" aria-label="Github"><GithubIcon/></a>
+    <a class=`${w} max-md:${w}` href="#contact" title="Email" aria-label="Email"><MailIcon/></a>
+    <a class=`btn btn-accent text-xl transition ease duration-300 hover:text-white` href="/CV Gianluca Vespe English.pdf" download="/CV Gianluca Vespe English.pdf" title="Download Curriculum Vitae" aria-label="Download Curriculum Vitae">Download CV</a>
 </div> 
