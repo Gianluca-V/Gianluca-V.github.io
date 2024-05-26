@@ -75,12 +75,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/dist
+          path: ${{ env.BUILD_PATH }}/dist/client
 
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}/client
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
