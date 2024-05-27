@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, squooshImageService  } from 'astro/config';
 import preact from "@astrojs/preact";
 import node from "@astrojs/node";
 import tailwind from "@astrojs/tailwind";
@@ -9,5 +9,8 @@ export default defineConfig({
   output: 'hybrid',
   adapter: node({
     mode: "standalone"
-  })
+  }),
+  image: {
+    service: squooshImageService(),
+  },
 });

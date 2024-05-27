@@ -33,7 +33,7 @@ importers:
         specifier: ^10.22.0
         version: 10.22.0
       sharp:
-        specifier: ^0.33.1
+        specifier: ^0.33.4
         version: 0.33.4
       tailwindcss:
         specifier: ^3.4.3

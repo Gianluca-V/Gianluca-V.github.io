@@ -5,7 +5,7 @@
       "stack": [
          "Angular", "TypeScript", "html", "scss"
       ],
-      "image": "/windows7Web.jpg",
+      "image": "/src/assets/windows7Web.jpg",
       "url": "https://github.com/Gianluca-V/Windows-7-Angular"
    },
    {
@@ -14,7 +14,7 @@
       "stack": [
          "C#", ".NET", "Word", "Windows Forms"
       ],
-      "image": "/WordAsIde.jpeg",
+      "image": "/src/assets/WordAsIde.jpeg",
       "url": "https://github.com/Gianluca-V/WordAsIDE"
    },
    {
@@ -23,7 +23,7 @@
       "stack": [
          "C#", "Unity"
       ],
-      "image": "/SpinWarriors.jpg",
+      "image": "/src/assets/SpinWarriors.jpg",
       "url": "https://github.com/Gianluca-V/spin-warriors"
    }
 ]

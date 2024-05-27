@@ -9,12 +9,16 @@ import CsharpIcon from "../components/icons/csharpIcon.astro";
 import DotnetIcon from "../components/icons/dotnetIcon.astro";
 import SqlserverIcon from "../components/icons/sqlserverIcon.astro";
 import UnityIcon from "../components/icons/unityIcon.astro"
+import { Image } from "astro:assets";
+import FilasImage from "../assets/filasImage.jpeg"
+import FakeStoreAPIImage from "../assets//FakeStoreAPI.jpg"
+import LeverWarriorsImage from "../assets/LeverWarriors.png"
 ---
 
 <div class="flex max-w-7xl m-auto flex-col min-h-screen">
     <div class="hero w-full border-[1rem] border-base-300 border-solid rounded-t-xl">
         <div class="hero-content text-center flex flex-col w-full p-0 gap-0">
-            <img src="/filasImage.jpeg" class="max-w-full w-full max-h-60 object-fill aspect-video shadow-2xl" />
+            <Image src={FilasImage} alt="Filas Project" loading="eager" class="max-w-full w-full max-h-60 object-fill aspect-video shadow-2xl" />
             <div class="max-w-[60ch]">
                 <h3 class="text-5xl font-bold">Fullstack web app</h3>
                 <p class="py-6 text-pretty">Developed a user-friendly web application for a non-profit organization that caters to individuals with mental disabilities. The application features an intuitive interface, an order management system, and an admin dashboard for content modification. A secure RESTful API powers the backend, handling all data elements and implementing robust security protocols for administrator registration. </p>
@@ -34,7 +38,7 @@ import UnityIcon from "../components/icons/unityIcon.astro"
         <div class="hero w-full border-[1rem] border-base-300 border-solid rounded-bl-xl">
             <div class="flex flex-col items-center w-full">
                 <div class="hero-content flex-col items-center p-0 lg:flex-row">
-                    <img src="/FakeStoreAPI.jpg" class="max-w-[50%] max-h-full max-lg:w-full max-lg:max-w-full shadow-2xl" />
+                    <Image src={FakeStoreAPIImage} alt="FakeStoreAPI Project" loading="eager" class="max-w-[50%] max-h-full max-lg:w-full max-lg:max-w-full shadow-2xl" />
                     <div class="max-w-[60ch] pr-2 max-md:text-center">
                         <h3 class="text-5xl font-bold text-balance">Fake Store API</h3>
                         <p class="py-6 text-pretty">Developed an entire REST API for an ecommerce using clean architecture and domain driven design, following good practices and implementing design patterns. The system counts with filters, pagination and unit testing.</p>
@@ -51,7 +55,7 @@ import UnityIcon from "../components/icons/unityIcon.astro"
         <div class="hero w-full border-[1rem] border-base-300 border-solid rounded-bl-xl">
             <div class="flex flex-col items-center w-full">
                 <div class="hero-content flex-col items-center p-0 lg:flex-row-reverse">
-                    <img src="/LeverWarriors.png" class="max-w-[50%] max-h-full aspect-video max-lg:w-full max-lg:max-w-full shadow-2xl" />
+                    <Image src={LeverWarriorsImage} alt="Lever Warriors Project" loading="eager" class="max-w-[50%] max-h-full aspect-video max-lg:w-full max-lg:max-w-full shadow-2xl" />
                     <div class="max-w-[60ch] text-right pl-2 max-md:text-center">
                         <h3 class="text-5xl font-bold text-balance">Lever Warriors</h3>
                         <p class="py-6 text-pretty">Challenge your opponent in a weapon-based 2D brawl made with Unity! Master the art of leverage to outmaneuver your foes with swords and other weapons. One fall or knockout means defeat, so stay sharp!</p>
