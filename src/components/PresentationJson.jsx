@@ -23,7 +23,7 @@ export function PresentationJson() {
   <div ref={codeContainerRef} id="mockup-code" class="mockup-code bg-gray-800 max-w-2xl shadow-2xl shadow-slate-700 max-md:text-sm max-sm:w-11/12 animate__animated animate__fadeIn animate__slow">
     <pre data-prefix="1"><code class="ml-0"><span>&#123;</span></code></pre>
       <pre data-prefix="2"><code class="ml-4"><span class="text-red-600">"name"</span>: <span class="text-green-600">"Gianluca Vespe"</span>,</code></pre>
-      <pre data-prefix="3"><code class="ml-4"><span class="text-red-600">"birthday"</span>: <span class="text-green-600">"2004-09-04"</span>, </code></pre>
+      <pre data-prefix="3"><code class="ml-4"><span class="text-red-600">"birthday"</span>: <span class="text-green-600">"2004-09-02"</span>, </code></pre>
       <pre data-prefix="4"><code class="ml-4"><span class="text-red-600">"rol"</span>: <span class="text-green-600">"Software Developer"</span>,</code></pre>
       <pre data-prefix="5"><code class="ml-4"><span class="text-red-600">"other_information"</span>: &#123;</code></pre>
         <pre data-prefix="6"><code class="ml-8"><span class="text-red-600">"skills"</span>: [<span class="text-green-600">"C#"</span>,<span class="text-green-600"> "Angular"</span>, <span class="text-green-600">"TypeScript"</span>, <span class="text-green-600">"SQL"</span>],</code></pre>
