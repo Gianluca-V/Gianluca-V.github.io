@@ -19,7 +19,7 @@ if (!images[image]) throw new Error(`"${image}" does not exist in glob: "src/ass
     <div class="card-body">
       <h2 class="card-title" aria-label={title}>{title}</h2>
       <p>{body}</p>
-      <a href={url} title="Github Link" aria-label="Github Link" class="btn btn-primary bg-white text-black text-xl">Github</a>
+      <a href={url} target="_blank" title="Github Link" aria-label="Github Link" class="btn btn-primary bg-white text-black text-xl">Github</a>
       <div class="card-actions justify-end">
         {stack.map((tech) => (
             <div class="badge badge-outline">{tech}</div>
