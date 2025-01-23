@@ -26,7 +26,7 @@ export function PresentationJson() {
       <pre data-prefix="3"><code class="ml-4"><span class="text-red-600">"birthday"</span>: <span class="text-green-600">"2004-09-02"</span>, </code></pre>
       <pre data-prefix="4"><code class="ml-4"><span class="text-red-600">"rol"</span>: <span class="text-green-600">"Software Developer"</span>,</code></pre>
       <pre data-prefix="5"><code class="ml-4"><span class="text-red-600">"other_information"</span>: &#123;</code></pre>
-        <pre data-prefix="6"><code class="ml-8"><span class="text-red-600">"skills"</span>: [<span class="text-green-600">"C#"</span>,<span class="text-green-600"> "Angular"</span>, <span class="text-green-600">"TypeScript"</span>, <span class="text-green-600">"SQL"</span>],</code></pre>
+        <pre data-prefix="6"><code class="ml-8"><span class="text-red-600">"skills"</span>: [<span class="text-green-600">"C#"</span>,<span class="text-green-600">"Go"</span>,<span class="text-green-600"> "Angular"</span>, <span class="text-green-600">"TypeScript"</span>, <span class="text-green-600">"SQL"</span>],</code></pre>
         <pre data-prefix="7"><code class="ml-8"><span class="text-red-600">"hobbies"</span>: [<span class="text-green-600">"Music"</span>, <span class="text-green-600">"Reading"</span>, <span class="text-green-600">"Series"</span>, <span class="text-green-600">"Games"</span>],</code></pre>
         <pre data-prefix="8"><code class="ml-8"><span class="text-red-600">"education"</span>: [</code></pre>
           <pre data-prefix="9"><code class="ml-12">&#123;</code></pre>
