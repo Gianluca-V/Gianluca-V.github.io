@@ -1,0 +1,11 @@
+{
+  "title": "Word as a C++ IDE",
+  "tagline": "Yes, Microsoft Word. Yes, a real IDE.",
+  "description": "A Windows Forms app that turns Microsoft Word into a working C++ IDE — write, compile, and run code without leaving your document. It even has syntax colors.",
+  "tech": ["C#", ".NET", "Windows Forms"],
+  "links": [
+    { "label": "Repository", "url": "https://github.com/Gianluca-V/WordAsIDE" }
+  ],
+  "image": "../../assets/WordAsIde.jpeg",
+  "order": 3
+}

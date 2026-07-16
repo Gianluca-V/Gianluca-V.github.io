@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  image?: ImageMetadata;
+  title: string;
+  class?: string;
+}
+
+const { image, title, class: className = '' } = Astro.props;
+
+// Fallback monogram for entries without a screenshot, e.g. "DM" for DeskMatch.
+const monogram = title
+  .split(/\s+/)
+  .map((word) => word[0])
+  .filter((char) => /[A-Za-z0-9]/.test(char ?? ''))
+  .slice(0, 2)
+  .join('')
+  .toUpperCase();
+---
+
+{
+  image ? (
+    <Image
+      src={image}
+      alt={`Screenshot of ${title}`}
+      class={`h-full w-full object-cover ${className}`}
+      widths={[480, 800, image.width]}
+      sizes="(min-width: 1024px) 480px, 100vw"
+    />
+  ) : (
+    <div
+      class={`flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/25 via-surface-overlay to-magenta/25 ${className}`}
+      role="img"
+      aria-label={`${title} placeholder artwork`}
+    >
+      <span class="font-mono text-4xl font-bold tracking-tight text-fg/80 sm:text-5xl">
+        <span class="text-code-punct">&lt;</span>
+        <span class="bg-gradient-to-r from-accent-soft to-magenta bg-clip-text text-transparent">
+          {monogram}
+        </span>
+        <span class="text-code-punct">/&gt;</span>
+      </span>
+    </div>
+  )
+}

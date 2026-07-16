@@ -1,0 +1,16 @@
+{
+  "company": "DAIRA IT Group",
+  "role": "Backend Developer",
+  "seniority": "Junior",
+  "startDate": "2024",
+  "endDate": null,
+  "summary": "Backend developer on a Scrum team, building robust and efficient services in Go and Django for production systems.",
+  "highlights": [
+    "Building robust, efficient backend services in Go with solid database design",
+    "Developing features and services with Django",
+    "Creating automations and agentic workflows with n8n and Puppeteer",
+    "Collaborating in agile Scrum cycles with a multidisciplinary team"
+  ],
+  "tech": ["Go", "Django", "PostgreSQL", "n8n", "Puppeteer", "Scrum"],
+  "order": 1
+}

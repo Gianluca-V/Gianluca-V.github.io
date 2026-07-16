@@ -1,0 +1,15 @@
+{
+  "title": "API Traffic Analytics",
+  "tagline": "Distributed real-time traffic analysis built in Go",
+  "description": "A distributed system that analyzes API traffic in real time, built on a microservices architecture with Go, Kafka, and Redis, with full server monitoring through Prometheus and Grafana.",
+  "highlights": [
+    "Event-streaming pipeline on Kafka for real-time ingestion and processing",
+    "Go microservices with Redis for low-latency state",
+    "Server monitoring with Prometheus metrics and Grafana dashboards"
+  ],
+  "tech": ["Go", "Kafka", "Redis", "Prometheus", "Grafana"],
+  "links": [
+    { "label": "Repository", "url": "https://github.com/Gianluca-V/api-traffic-analytics" }
+  ],
+  "order": 2
+}

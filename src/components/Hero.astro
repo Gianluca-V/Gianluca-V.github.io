@@ -1,0 +1,79 @@
+---
+import AboutCard from './AboutCard.astro';
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+---
+
+<section id="home" class="relative overflow-hidden" aria-label="Introduction">
+  <div
+    class="pointer-events-none absolute inset-0 -z-10"
+    aria-hidden="true"
+    style="background:
+      radial-gradient(45rem 30rem at 15% -10%, color-mix(in srgb, #b44ce6 14%, transparent), transparent 70%),
+      radial-gradient(40rem 28rem at 90% 20%, color-mix(in srgb, #ff2097 9%, transparent), transparent 70%);"
+  >
+  </div>
+
+  <div
+    class="mx-auto grid max-w-5xl items-center gap-12 px-4 pt-20 pb-24 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:pt-28"
+  >
+    <div>
+      <p class="font-mono text-sm text-fg-muted">Hi, I'm</p>
+      <h1
+        class="mt-2 bg-gradient-to-r from-accent-soft via-accent to-magenta bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl"
+      >
+        {site.owner}
+      </h1>
+      <p class="mt-4 font-mono text-xl sm:text-2xl">
+        <span class="text-fg">The </span><span class="text-code-punct">&lt;</span><span
+          class="text-magenta">software</span
+        >
+        <span class="text-accent-soft">developer</span><span class="text-code-punct">/&gt;</span>
+      </p>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-fg-muted">
+        {site.positioning}
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a
+          href="#projects"
+          class="rounded-lg bg-gradient-to-r from-accent to-magenta px-5 py-2.5 font-semibold text-white shadow-lg shadow-magenta/20 transition-transform hover:scale-105"
+        >
+          View my work
+        </a>
+        <a
+          href={site.cvHref}
+          class="inline-flex items-center gap-2 rounded-lg border border-line px-5 py-2.5 font-semibold text-fg transition-colors hover:border-accent hover:text-accent-soft"
+        >
+          <Icon name="download" class="h-4 w-4" />
+          Download CV
+        </a>
+      </div>
+
+      <div class="mt-8 flex items-center gap-4">
+        <a
+          href={site.github.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+          class="text-fg-muted transition-colors hover:text-fg"
+        >
+          <Icon name="github" class="h-6 w-6" />
+        </a>
+        <a
+          href={site.linkedin.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+          class="text-fg-muted transition-colors hover:text-fg"
+        >
+          <Icon name="linkedin" class="h-6 w-6" />
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <AboutCard />
+    </div>
+  </div>
+</section>

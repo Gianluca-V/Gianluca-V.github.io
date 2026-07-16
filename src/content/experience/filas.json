@@ -1,0 +1,15 @@
+{
+  "company": "F.I.L.A.S.",
+  "role": "Fullstack Developer",
+  "seniority": "Intern",
+  "startDate": "2023",
+  "endDate": "2023",
+  "summary": "Designed and developed a web platform for a non-profit that supports people with mental disabilities — public site, order management, and an admin panel.",
+  "highlights": [
+    "Built the REST API with Gin (Go) and secured it following security best practices",
+    "Designed a dynamic, accessibility-minded web application for the organization's users",
+    "Delivered the platform end to end — public site, order management, and admin dashboard"
+  ],
+  "tech": ["Go", "Gin", "Vue", "SCSS", "MySQL"],
+  "order": 3
+}

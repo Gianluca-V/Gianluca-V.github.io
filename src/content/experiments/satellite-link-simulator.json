@@ -1,0 +1,12 @@
+{
+  "title": "Satellite Link Simulator",
+  "tagline": "Real-time 3D satellite communications simulator",
+  "description": "An interactive 3D simulator of satellite communication links: Keplerian orbital mechanics, ITU-R atmospheric attenuation models, and full RF link budgets (free-space path loss, Eb/N0, Shannon capacity, Doppler) — with results validated against a published measurement study. Add LEO/MEO/GEO satellites, change the weather, and watch links close or fail in real time.",
+  "tech": ["TypeScript", "React", "Three.js", "Zustand"],
+  "links": [
+    { "label": "Live demo", "url": "https://simulacion-satelital-vespelabs.netlify.app/" },
+    { "label": "Repository", "url": "https://github.com/Gianluca-V/simulacion-satelital" }
+  ],
+  "image": "../../assets/Satelites.jpg",
+  "order": 1
+}

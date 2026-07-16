@@ -1,0 +1,20 @@
+{
+  "title": "DeskMatch",
+  "tagline": "Kubernetes-powered workspace booking platform — live in production",
+  "description": "Smart desk booking and workspace management platform where companies list office spaces and users discover, book, review, and pay for workspaces. Built as a production-grade microservices system, deployed to a real public URL, and led as Technical Lead & Product Owner of an 11-person team.",
+  "highlights": [
+    "Technical Lead & Product Owner of an 11-person team — owned architecture, backlog, and delivery",
+    "5 backend services (.NET 8) behind a YARP API gateway, each owning its bounded context and PostgreSQL database with serializable transactional consistency, latency optimized with Redis",
+    "CQRS + Vertical Slice Architecture implemented from scratch",
+    "AI-powered hybrid semantic search: a local LLM (Ollama) extracts structured filters from natural-language queries, combined with vector embeddings + keyword + geo search on OpenSearch",
+    "Full observability: OpenTelemetry tracing with Jaeger, Prometheus/Grafana dashboards, Loki logs",
+    "Docker, Kubernetes (kustomize) and Helm deployments with GitHub Actions CI/CD and robust xUnit test coverage",
+    "Payments, QR check-in, KYB verification, PDF invoicing, interactive maps, analytics dashboards"
+  ],
+  "tech": [".NET 8", "C#", "PostgreSQL", "Redis", "OpenSearch", "Ollama", "React", "Docker", "Kubernetes", "Helm", "OpenTelemetry"],
+  "links": [
+    { "label": "Live demo", "url": "https://deskmatch.vespelabs.com/" }
+  ],
+  "image": "../../assets/Deskmatch.jpeg",
+  "order": 1
+}

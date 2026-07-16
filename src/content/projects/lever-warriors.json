@@ -1,0 +1,16 @@
+{
+  "title": "Lever Warriors",
+  "tagline": "Weapon-based 2D brawler built with Unity",
+  "description": "Challenge your opponent in a weapon-based 2D brawl. Master the art of leverage to outmaneuver your foes with swords and other weapons — one fall or knockout means defeat, so stay sharp.",
+  "highlights": [
+    "Physics-driven leverage combat mechanic",
+    "Local versus play",
+    "Published and playable on itch.io"
+  ],
+  "tech": ["C#", "Unity"],
+  "links": [
+    { "label": "Play it", "url": "https://gianlucav.itch.io/lever-warriors" }
+  ],
+  "image": "../../assets/LeverWarriors.png",
+  "order": 3
+}

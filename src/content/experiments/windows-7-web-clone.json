@@ -1,0 +1,12 @@
+{
+  "title": "Windows 7 Web Clone",
+  "tagline": "The 2009 desktop, rebuilt for the browser",
+  "description": "A faithful web recreation of Windows 7 built with Angular 17 — window management, taskbar, and a handful of working apps, all in the browser.",
+  "tech": ["Angular", "TypeScript", "SCSS"],
+  "links": [
+    { "label": "Repository", "url": "https://github.com/Gianluca-V/Windows-7-Angular" },
+    { "label": "Live", "url": "https://windows-7-angular.netlify.app" }
+  ],
+  "image": "../../assets/windows7Web.jpg",
+  "order": 2
+}

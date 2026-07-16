@@ -1,0 +1,17 @@
+{
+  "title": "Fake Store API",
+  "tagline": "E-commerce REST API with clean architecture & DDD",
+  "description": "A complete e-commerce REST API built with clean architecture and domain-driven design — filtering, pagination, design patterns, and unit tests throughout.",
+  "highlights": [
+    "Hexagonal architecture",
+    "Domain-driven design",
+    "Unit testing",
+    "Design patterns applied deliberately"
+  ],
+  "tech": ["C#", ".NET", "SQL Server"],
+  "links": [
+    { "label": "Repository", "url": "https://github.com/Gianluca-V/Fake-Store-API-DDD" }
+  ],
+  "image": "../../assets/FakeStoreAPI.jpg",
+  "order": 4
+}

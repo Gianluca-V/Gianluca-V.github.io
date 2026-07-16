@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-surface: #08080d;
+  --color-surface-raised: #101019;
+  --color-surface-overlay: #16161f;
+  --color-line: #26263a;
+
+  /* Typography */
+  --color-fg: #ecebf5;
+  --color-fg-muted: #a3a1b8;
+  --color-fg-faint: #6d6b85;
+
+  /* Brand accents */
+  --color-accent: #b44ce6;
+  --color-accent-soft: #cf8df2;
+  --color-magenta: #ff2097;
+
+  /* Code-card syntax colors */
+  --color-code-key: #7ecbff;
+  --color-code-string: #a8e6a3;
+  --color-code-punct: #7a7894;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+}
+
+html {
+  background-color: var(--color-surface);
+  color: var(--color-fg);
+  scrollbar-color: var(--color-line) var(--color-surface);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-magenta);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Anchor targets clear the sticky nav */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/*
+ * Scroll-reveal animation.
+ * Elements are hidden only when JS has confirmed it will reveal them
+ * (html.reveal-ready), so content is never lost without JS.
+ * Motion is skipped entirely for prefers-reduced-motion users.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html.reveal-ready .reveal {
+    opacity: 0;
+    translate: 0 1.5rem;
+    transition:
+      opacity 0.6s ease-out,
+      translate 0.6s ease-out;
+  }
+
+  html.reveal-ready .reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

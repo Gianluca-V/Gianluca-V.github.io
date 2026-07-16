@@ -1,0 +1,96 @@
+---
+// The "about.json" card — a syntax-highlighted snapshot of education and
+// core skills. Data lives in src/data/site.ts; this component only turns it
+// into tokenized lines so colors stay under our control.
+import { profile } from '../data/site';
+
+type TokenType = 'punct' | 'key' | 'string' | 'plain';
+type Token = { text: string; type: TokenType };
+
+const punct = (text: string): Token => ({ text, type: 'punct' });
+const key = (name: string): Token[] => [
+  punct('"'),
+  { text: name, type: 'key' },
+  punct('": '),
+];
+const str = (value: string, trailing = ''): Token[] => [
+  punct('"'),
+  { text: value, type: 'string' },
+  punct(`"${trailing}`),
+];
+const indent = (level: number): Token => ({ text: '  '.repeat(level), type: 'plain' });
+const space: Token = { text: ' ', type: 'plain' };
+
+const educationLines: Token[][] = profile.education.flatMap((entry, index) => {
+  const isLast = index === profile.education.length - 1;
+  return [
+    [indent(2), punct('{')],
+    [indent(3), ...key('degree'), ...str(entry.degree, ',')],
+    [indent(3), ...key('school'), ...str(entry.school, ',')],
+    [indent(3), ...key('years'), ...str(entry.years)],
+    [indent(2), punct(isLast ? '}' : '},')],
+  ];
+});
+
+// Render skills in rows of up to three, comma-separated like real JSON.
+const SKILLS_PER_LINE = 3;
+const skillLines: Token[][] = [];
+for (let i = 0; i < profile.coreSkills.length; i += SKILLS_PER_LINE) {
+  const row = profile.coreSkills.slice(i, i + SKILLS_PER_LINE);
+  skillLines.push(
+    row.flatMap((skill, indexInRow) => {
+      const isGlobalLast = i + indexInRow === profile.coreSkills.length - 1;
+      return [
+        ...(indexInRow === 0 ? [indent(2)] : [space]),
+        ...str(skill, isGlobalLast ? '' : ','),
+      ];
+    })
+  );
+}
+
+const lines: Token[][] = [
+  [punct('{')],
+  [indent(1), ...key('education'), punct('[')],
+  ...educationLines,
+  [indent(1), punct('],')],
+  [indent(1), ...key('coreSkills'), punct('[')],
+  ...skillLines,
+  [indent(1), punct(']')],
+  [punct('}')],
+];
+
+const tokenClass: Record<TokenType, string> = {
+  punct: 'text-code-punct',
+  key: 'text-code-key',
+  string: 'text-code-string',
+  plain: 'text-fg',
+};
+---
+
+<figure
+  class="overflow-hidden rounded-xl border border-line bg-surface-raised shadow-2xl shadow-accent/5"
+>
+  <figcaption
+    class="flex items-center gap-2 border-b border-line px-4 py-2.5 font-mono text-xs text-fg-muted"
+  >
+    <span class="flex gap-1.5" aria-hidden="true">
+      <span class="h-2.5 w-2.5 rounded-full bg-magenta/70"></span>
+      <span class="h-2.5 w-2.5 rounded-full bg-accent/70"></span>
+      <span class="h-2.5 w-2.5 rounded-full bg-code-key/70"></span>
+    </span>
+    <span class="ml-1">about.json</span>
+  </figcaption>
+  <div class="overflow-x-auto px-4 py-4">
+    <code class="block font-mono text-xs leading-relaxed whitespace-pre sm:text-sm">
+      {
+        lines.map((line) => (
+          <span class="block">
+            {line.map((token) => (
+              <span class={tokenClass[token.type]}>{token.text}</span>
+            ))}
+          </span>
+        ))
+      }
+    </code>
+  </div>
+</figure>

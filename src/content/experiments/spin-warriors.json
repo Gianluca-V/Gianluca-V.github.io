@@ -1,0 +1,11 @@
+{
+  "title": "Spin Warriors",
+  "tagline": "BeyBlade-inspired 2D arena fighter",
+  "description": "A two-player 2D arena fighter inspired by BeyBlade — use skills and powers to knock your opponent out of the arena.",
+  "tech": ["C#", "Unity"],
+  "links": [
+    { "label": "Repository", "url": "https://github.com/Gianluca-V/spin-warriors" }
+  ],
+  "image": "../../assets/SpinWarriors.jpg",
+  "order": 4
+}

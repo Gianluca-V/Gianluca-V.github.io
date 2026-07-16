@@ -1,0 +1,104 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+
+const inputClass =
+  'w-full rounded-lg border border-line bg-surface-raised px-4 py-2.5 text-fg placeholder:text-fg-faint transition-colors focus:border-accent focus:outline-none';
+---
+
+<section id="contact" class="mx-auto max-w-5xl px-4 py-20 sm:px-6" aria-label="Contact">
+  <SectionHeading eyebrow="contact" title="Let's build something" />
+
+  <div class="grid gap-12 lg:grid-cols-[3fr_2fr]">
+    <form action={site.contactFormEndpoint} method="POST" class="reveal space-y-5">
+      <div>
+        <label for="contact-name" class="mb-1.5 block text-sm font-medium text-fg-muted">
+          Name
+        </label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          required
+          autocomplete="name"
+          placeholder="Your name"
+          class={inputClass}
+        />
+      </div>
+      <div>
+        <label for="contact-email" class="mb-1.5 block text-sm font-medium text-fg-muted">
+          Email
+        </label>
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="you@company.com"
+          class={inputClass}
+        />
+      </div>
+      <div>
+        <label for="contact-message" class="mb-1.5 block text-sm font-medium text-fg-muted">
+          Message
+        </label>
+        <textarea
+          id="contact-message"
+          name="message"
+          required
+          rows="5"
+          placeholder="Tell me about your project, role, or idea…"
+          class={inputClass}></textarea>
+      </div>
+      <button
+        type="submit"
+        class="rounded-lg bg-gradient-to-r from-accent to-magenta px-6 py-2.5 font-semibold text-white shadow-lg shadow-magenta/20 transition-transform hover:scale-105"
+      >
+        Send message
+      </button>
+    </form>
+
+    <div class="reveal">
+      <p class="leading-relaxed text-fg-muted">
+        Whether you're hiring, exploring a collaboration, or just want to talk shop about
+        architecture, simulations, or games — my inbox is open. I'll get back to you as soon as I
+        can.
+      </p>
+      <ul class="mt-8 space-y-4">
+        <li>
+          <a
+            href={site.github.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 text-fg-muted transition-colors hover:text-fg"
+          >
+            <Icon name="github" class="h-5 w-5" />
+            {site.github.label}
+          </a>
+        </li>
+        <li>
+          <a
+            href={site.linkedin.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 text-fg-muted transition-colors hover:text-fg"
+          >
+            <Icon name="linkedin" class="h-5 w-5" />
+            {site.linkedin.label}
+          </a>
+        </li>
+        <li>
+          <a
+            href={site.cvHref}
+            class="inline-flex items-center gap-3 text-fg-muted transition-colors hover:text-fg"
+          >
+            <Icon name="download" class="h-5 w-5" />
+            Download my CV (PDF)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

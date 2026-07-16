@@ -1,0 +1,15 @@
+{
+  "company": "StudioVer",
+  "role": "Frontend Developer",
+  "seniority": "Intern",
+  "startDate": "2023",
+  "endDate": "2024",
+  "summary": "Worked with a rotating team crafting polished, interactive websites for client businesses.",
+  "highlights": [
+    "Improved the perceived quality of the company website by 60%, measured through an online survey",
+    "Delivered client-facing interactive websites with a different team on every project",
+    "Implemented responsive, pixel-accurate UI"
+  ],
+  "tech": ["TypeScript", "Angular", "HTML", "SCSS"],
+  "order": 2
+}
