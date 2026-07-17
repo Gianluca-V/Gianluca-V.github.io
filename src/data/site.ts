@@ -8,9 +8,9 @@ export const site = {
   tagline: 'The <software developer/>',
   title: 'Gianluca Vespe — Software Developer',
   description:
-    'Portfolio of Gianluca Vespe, software developer. Distributed microservices, real-time 3D simulations, games, and experiments — systems built end to end.',
+    'Portfolio of Gianluca Vespe, software developer. Distributed microservices, real-time 3D simulations, games, and experiments - systems built end to end.',
   positioning:
-    'I build systems end to end — from distributed microservices to real-time 3D simulations.',
+    'I build systems end to end - from distributed microservices to real-time 3D simulations.',
   cvHref: '/CV%20Gianluca%20Vespe%20English.pdf',
   github: {
     label: 'github.com/Gianluca-V',
