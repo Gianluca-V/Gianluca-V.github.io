@@ -51,8 +51,9 @@ export const profile: { education: EducationEntry[]; coreSkills: string[] } = {
     'Go',
     'C# / .NET',
     'TypeScript',
+    'Python / Django'
     'SQL / PostgreSQL',
     'Docker & Kubernetes',
-    'Kafka / Redis',
+    'Kafka', 'Redis',
   ],
 };
